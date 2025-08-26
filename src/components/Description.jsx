@@ -1,8 +1,12 @@
 // Description.jsx
 import React from 'react'
-import featuredCountries from '../Data/Asia_region_featured'
+import { Link } from 'react-router-dom'
+import { countriesData } from '../Data/countries'
 
 const Description = () => {
+  // เลือกประเทศตัวอย่าง 6 ประเทศ
+  const featuredCountries = countriesData.slice(0, 6)
+
   return (
     <section className="max-w-6xl mx-auto py-12 px-4">
       <h2 className="text-center text-2xl font-bold mb-3">แนะนำประเทศ</h2>
@@ -13,25 +17,25 @@ const Description = () => {
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {featuredCountries.map((country) => (
-          <div
+          <Link
+            to={`/country/${encodeURIComponent(country.name)}`}
             key={country.name}
-            className="rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition"
+            className="rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition flex flex-col"
           >
-            <img
-              src={country.image}
-              alt={country.name}
-              className="w-full h-40 object-cover"
-            />
+            {country.image && (
+              <img
+                src={country.image}
+                alt={country.name}
+                className="w-full h-40 object-cover"
+              />
+            )}
             <div className="p-4 flex justify-between items-center">
               <h3 className="font-semibold">{country.name}</h3>
-              <a
-                href={country.link}
-                className="text-sm bg-teal-500 text-white px-3 py-1 rounded-lg hover:bg-teal-600"
-              >
+              <span className="text-sm bg-teal-500 text-white px-3 py-1 rounded-lg hover:bg-teal-600">
                 ดูเพิ่มเติม
-              </a>
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

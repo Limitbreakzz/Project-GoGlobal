@@ -7,8 +7,9 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Home from "./pages/Home";
 import Contact from "./components/Contact";
-
-
+import Countries from "./pages/Countries"
+import CountriesByRegion from "./components/countries-compo/CountriesByRegion";
+import CountryDetail from "./components/countries-compo/CountryDetail";
 
 const App = () => {
   return (
@@ -17,9 +18,10 @@ const App = () => {
       <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/countries" element={<div>ประเทศต่างๆ</div>} />
+          <Route path="/countries" element={<CountriesByRegion />} /> 
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/country/:countryName" element={<CountryDetail />} /> 
         </Routes>
       </div>
       <Footer />
