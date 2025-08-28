@@ -1,4 +1,3 @@
-// Description.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { countriesData } from '../Data/countries'
@@ -9,7 +8,7 @@ const Description = () => {
 
   return (
     <section className="max-w-6xl mx-auto py-12 px-4">
-      <h2 className="text-center text-2xl font-bold mb-3">แนะนำประเทศ</h2>
+      <h2 className="text-gray-800 text-center text-2xl font-bold mb-3">แนะนำประเทศ</h2>
       <p className="text-center text-gray-600 mb-8">
         จากการคัดสรรข้อมูลเชิงลึกที่ครอบคลุม สำรวจหลากหลายประเทศในภูมิภาคเอเชีย
       </p>
@@ -31,7 +30,7 @@ const Description = () => {
             )}
             <div className="p-4 flex justify-between items-center">
               <h3 className="font-semibold">{country.name}</h3>
-              <span className="text-sm bg-teal-500 text-white px-3 py-1 rounded-lg hover:bg-teal-600">
+              <span className="text-sm bg-gray-800 text-white px-3 py-1 rounded-lg hover:bg-gray-600">
                 ดูเพิ่มเติม
               </span>
             </div>

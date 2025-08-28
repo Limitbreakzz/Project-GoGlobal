@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -7,11 +8,7 @@ export default function Footer() {
         
         {/* Logo & Brand */}
         <div className="flex flex-col items-center md:items-start">
-          <img
-            src="/img/icon.png" // ใส่ path ของโลโก้คุณเอง
-            alt="GoGlobal Logo"
-            className="w-28 mb-3"
-          />
+          <img src="/img/icon.png" alt="GoGlobal Logo" className="w-28 mb-3" />
           <h2 className="text-2xl font-bold">GoGlobal</h2>
         </div>
 
@@ -19,10 +16,10 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start space-y-2">
           <h3 className="font-semibold">เมนู</h3>
           <ul className="space-y-1">
-            <li><a href="/" className="hover:text-blue-600">หน้าหลัก</a></li>
-            <li><a href="/description" className="hover:text-blue-600">แนะนำประเทศ</a></li>
-            <li><a href="/about" className="hover:text-blue-600">เกี่ยวกับ</a></li>
-            <li><a href="/contact" className="hover:text-blue-600">ติดต่อ</a></li>
+            <li><Link to="/" className="hover:text-blue-600">หน้าหลัก</Link></li>
+            <li><Link to="/description" className="hover:text-blue-600">แนะนำประเทศ</Link></li>
+            <li><Link to="/about" className="hover:text-blue-600">เกี่ยวกับ</Link></li>
+            <li><Link to="/contact" className="hover:text-blue-600">ติดต่อ</Link></li>
           </ul>
         </div>
 
@@ -30,11 +27,12 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start space-y-2">
           <h3 className="font-semibold">เอเชีย</h3>
           <ul className="space-y-1">
-            <li>เอเชียตะวันออก</li>
-            <li>เอเชียตะวันออกเฉียงใต้</li>
-            <li>เอเชียใต้</li>
-            <li>เอเชียกลาง</li>
-            <li>ตะวันออกกลาง / เอเชียตะวันตก</li>
+            <li><Link to="/countries#all" className="hover:text-blue-600">ทุกประเทศ</Link></li>
+            <li><Link to="/countries#eastasia" className="hover:text-blue-600">เอเชียตะวันออก</Link></li>
+            <li><Link to="/countries#sea" className="hover:text-blue-600">เอเชียตะวันออกเฉียงใต้</Link></li>
+            <li><Link to="/countries#southasia" className="hover:text-blue-600">เอเชียใต้</Link></li>
+            <li><Link to="/countries#centralasia" className="hover:text-blue-600">เอเชียกลาง</Link></li>
+            <li><Link to="/countries#westasia" className="hover:text-blue-600">ตะวันออกกลาง / เอเชียตะวันตก</Link></li>
           </ul>
         </div>
 

@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Home from "./pages/Home";
 import Contact from "./components/Contact";
-import Countries from "./pages/Countries"
 import CountriesByRegion from "./components/countries-compo/CountriesByRegion";
 import CountryDetail from "./components/countries-compo/CountryDetail";
 
