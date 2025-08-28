@@ -2,8 +2,8 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { REGIONS, useFilteredCountries } from "./CountriesData";
-import { countriesData } from "../../Data/countries";
+import { REGIONS, useFilteredCountries } from "../components/countries-compo/CountriesData";
+import { countriesData } from "../Data/countries";
 
 export default function CountriesByRegion() {
   const region = REGIONS[0];
@@ -210,7 +210,7 @@ export default function CountriesByRegion() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          โปรดแจ้งหากต้องการขยายเป็นหน้าแยกสำหรับแต่ละประเทศ
+          คลิกชื่อประเทศเพื่อดูรายละเอียดเพิ่มเติมเกี่ยวกับประเทศนั้น
         </motion.footer>
       </div>
     </div>

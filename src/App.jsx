@@ -4,10 +4,10 @@ import './index.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import About from "./components/About";
+import About from "./pages/About";
 import Home from "./pages/Home";
-import Contact from "./components/Contact";
-import CountriesByRegion from "./components/countries-compo/CountriesByRegion";
+import Contact from "./pages/Contact";
+import CountriesByRegion from "./pages/CountriesByRegion";
 import CountryDetail from "./components/countries-compo/CountryDetail";
 
 const App = () => {
