@@ -3,28 +3,32 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-10">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-sm text-gray-800">
-        
+    <footer className="bg-gray-50 border-t border-gray-200 py-6 md:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-sm text-gray-800">
+
         {/* Logo & Brand */}
-        <div className="flex flex-col items-center md:items-start">
-          <img src="/img/icon.png" alt="GoGlobal Logo" className="w-28 mb-3" />
-          <h2 className="text-2xl font-bold">GoGlobal</h2>
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <img 
+            src="/img/icon.png" 
+            alt="GoGlobal Logo" 
+            className="w-16 sm:w-20 md:w-24 mb-2 sm:mb-3" // ปรับขนาดตาม screen
+          />
+          <h2 className="text-xl sm:text-2xl font-bold">GoGlobal</h2>
         </div>
 
-        {/* Navigation */}
-        <div className="flex flex-col items-center md:items-start space-y-2">
+        {/* Navigation (ซ่อนบางส่วนบนมือถือ) */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
           <h3 className="font-semibold">เมนู</h3>
           <ul className="space-y-1">
             <li><Link to="/" className="hover:text-blue-600">หน้าหลัก</Link></li>
             <li><Link to="/description" className="hover:text-blue-600">แนะนำประเทศ</Link></li>
-            <li><Link to="/about" className="hover:text-blue-600">เกี่ยวกับ</Link></li>
-            <li><Link to="/contact" className="hover:text-blue-600">ติดต่อ</Link></li>
+            <li className="hidden sm:block"><Link to="/about" className="hover:text-blue-600">เกี่ยวกับ</Link></li>
+            <li className="hidden sm:block"><Link to="/contact" className="hover:text-blue-600">ติดต่อ</Link></li>
           </ul>
         </div>
 
-        {/* Asia Section */}
-        <div className="flex flex-col items-center md:items-start space-y-2">
+        {/* Asia Section (ซ่อนบนมือถือ) */}
+        <div className="hidden md:flex flex-col items-start space-y-2">
           <h3 className="font-semibold">เอเชีย</h3>
           <ul className="space-y-1">
             <li><Link to="/countries#all" className="hover:text-blue-600">ทุกประเทศ</Link></li>
@@ -37,17 +41,18 @@ export default function Footer() {
         </div>
 
         {/* Contact */}
-        <div className="flex flex-col items-center md:items-start space-y-2 md:col-span-3 mt-6">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-2 mt-4 md:mt-0 md:col-span-3">
           <h3 className="font-semibold">ติดต่อ</h3>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-center md:justify-start space-x-2">
             <Mail className="w-4 h-4" />
             <span>GoGlobal@gmail.com</span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-center md:justify-start space-x-2">
             <Phone className="w-4 h-4" />
             <span>099-2346789</span>
           </div>
         </div>
+
       </div>
     </footer>
   );
