@@ -210,7 +210,7 @@ export default function CountriesByRegion() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          คลิกชื่อประเทศเพื่อดูรายละเอียดเพิ่มเติมเกี่ยวกับประเทศนั้น
+          กดที่ดาวเพื่อบันทึกไว้ดูเฉพาะบันทึก
         </motion.footer>
       </div>
     </div>
