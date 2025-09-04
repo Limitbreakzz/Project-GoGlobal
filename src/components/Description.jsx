@@ -30,7 +30,7 @@ const Description = () => {
             )}
             <div className="p-4 flex justify-between items-center">
               <h3 className="font-semibold">{country.name}</h3>
-              <span className="text-sm bg-gray-800 text-white px-3 py-1 rounded-lg hover:bg-gray-600">
+              <span className="text-sm bg-[#A4EBF3] text-white px-3 py-1 rounded-lg hover:bg-[#51C2D5]">
                 ดูเพิ่มเติม
               </span>
             </div>
