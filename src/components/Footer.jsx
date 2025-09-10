@@ -21,9 +21,9 @@ export default function Footer() {
           <h3 className="font-semibold">เมนู</h3>
           <ul className="space-y-1">
             <li><Link to="/" className="hover:text-blue-600">หน้าหลัก</Link></li>
-            <li><Link to="/description" className="hover:text-blue-600">แนะนำประเทศ</Link></li>
-            <li><Link to="/description" className="hover:text-blue-600">เกี่ยวกับ</Link></li>
-            <li><Link to="/description" className="hover:text-blue-600">ติดต่อ</Link></li>
+            <li><Link to="/CountriesByRegion" className="hover:text-blue-600">แนะนำประเทศ</Link></li>
+            <li><Link to="/About" className="hover:text-blue-600">เกี่ยวกับ</Link></li>
+            <li><Link to="/Contact" className="hover:text-blue-600">ติดต่อ</Link></li>
           </ul>
         </div>
 
